@@ -1,0 +1,302 @@
+/* Call Of Duty # Font family  */
+@font-face {
+    font-family: 'cod';
+    src: url("font-family/ModernWarfare-8MM6z.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: .3s;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-image: url('media/call-of-duty.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, #00000000, #00000095);
+    z-index: -1;
+    opacity: 1;
+}
+
+.container {
+    max-width: 1480px;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.navbar a.logo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    animation: slideLeft 500ms linear forwards;
+    opacity: 0;
+}
+
+.navbar a.logo span {
+    font-family: 'cod';
+}
+
+.navbar a.logo span.small {
+    font-size: 11px;
+}
+
+.navbar .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-right ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 5rem;
+}
+
+.navbar .navbar-right ul a {
+    display: block;
+    color: #dcdcdc;
+    padding: 8px;
+    margin: 0 10px;
+    font-size: 13px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-right .search-btn {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+.navbar .navbar-right ul a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: .3s;
+    opacity: 0;
+}
+
+.navbar .navbar-right ul a:hover::before { 
+    opacity: 1;
+    bottom: 0;
+}
+
+.navbar .navbar-right ul a:hover {
+    color: #fff;
+}
+
+.main-content .left-content {
+    width: max-content;
+    margin-top: 8rem;
+}
+
+.call-of-duty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideLeft 500ms linear forwards;
+    opacity: 0;
+}
+
+.call-of-duty h1 {
+    font-size: 4rem;
+    font-family: 'cod';
+}
+
+.call-of-duty h1.small {
+    font-size: 1rem;
+}
+
+.modern-warfare h1 {
+    font-family: 'cod';
+    font-size: 1.5rem;
+    animation: slideLeft 500ms linear forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+
+.about {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    animation: slideLeft 500ms linear forwards;
+    animation-delay: 1000ms;
+    opacity: 0;
+}
+
+.about .heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-left: 30px;
+
+}
+
+.about p {
+    font-size: 14px;
+    color: #999;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.preorder-button {
+    margin-top: 2rem;
+    animation: slideLeft 500ms linear forwards;
+    animation-delay: 1500ms;
+    opacity: 0;
+}
+
+.preorder-button a {
+    display: block;
+    width: max-content;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transform: skew(-15deg);
+}
+
+.preorder-button a:hover {
+    transform: skew(0deg);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+}
+
+.social-links .link {
+    background: #fff;
+    padding: 10px;
+    width: 38px;
+    overflow: hidden;
+    animation: slideLeft 500ms linear forwards;
+    opacity: 0;
+}
+
+.social-links .link:nth-child(1) {
+    animation-delay: 2000ms;
+}
+
+.social-links .link:nth-child(2) {
+    animation-delay: 2200ms;
+}
+
+.social-links .link:nth-child(3) {
+    animation-delay: 2400ms;
+}
+
+.social-links .link:nth-child(4) {
+    animation-delay: 2600ms;
+}
+
+
+
+.social-links .link a {
+    color: #000;
+    white-space: nowrap;
+}
+
+.social-links .link a i {
+    color: #000;
+    margin-right: 10px;
+}
+
+.social-links .link:hover {
+    width: 160px;
+}
+
+.right-content {
+    position: absolute;
+    right: 2%;
+    bottom: 20%;
+    animation: slideLeft 500ms linear forwards;
+    animation-delay: 2900ms;
+    opacity: 0;
+
+
+}
+
+.right-content .video,
+.right-content .video-thumb {
+    height: 170px;
+    width: 270px;
+    position: relative;
+}
+
+.right-content .video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.right-content .video .heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.right-content .video .play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border: 4px solid #fff;
+    background: transparent;
+    border-radius: 99px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.right-content .video .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1); 
+}
+
+.right-content .video:hover img {
+    filter: blur(2px);
+}
+
+@keyframes slideLeft {
+    to { transform: translate(0px); opacity: 1; }
+    from { transform: translate(-50px); opacity: 0; }
+}
